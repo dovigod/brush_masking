@@ -41,6 +41,11 @@ module.exports = {
 			},
 			//css
 			{ test: /\.css$/, use: [MiniCSSExtractPlugin.loader, 'css-loader'] },
+			{
+				test: /\.s[ac]ss$/,
+				exclude: /node_modules/,
+				use: [MiniCSSExtractPlugin.loader, 'css-loader', 'sass-loader']
+			},
 
 			//image
 			{

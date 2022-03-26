@@ -9,7 +9,7 @@ const infoColor = (_message) => {
 };
 
 module.exports = merge(commonConfig, {
-	stats: 'errors-warnings',
+	stats: 'errors-only',
 	mode: 'development',
 	infrastructureLogging: {
 		level: 'warn'
@@ -57,5 +57,5 @@ module.exports = merge(commonConfig, {
 			return middleWares;
 		}
 	},
-	devtool: 'eval'
+	devtool: 'source-map'
 });
